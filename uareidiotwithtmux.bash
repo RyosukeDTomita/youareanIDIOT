@@ -54,7 +54,7 @@ do
     if ps -e | grep play > /dev/null 2>&1; then
         :
     else
-        play -q ./music/youareidiot.mp3 > /dev/null 2>&1 &
+        play -q ./youareidiot.mp3 > /dev/null 2>&1 &
     fi
     sleep 1
     tmp=$i
