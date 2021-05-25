@@ -10,7 +10,7 @@
 # Date: 2021/03/09
 ##########################################################################
 PKG="uareidiottmux"
-readonly dirpath="/home/tomita/bash/toy/uareidiot"
+#readonly dirpath="/home/tomita/bash/toy/uareidiot"
 
 function clonetmux()
 {
@@ -18,12 +18,12 @@ function clonetmux()
     do
         [ "$h_or_v" = "-v" ] && h_or_v="-h" || h_or_v="-v"
         if [ $cnt -eq 1 ]; then
-            $dirpath/uareidiotwithtmux.bash
+            ./uareidiotwithtmux.bash
         else
             panes=$(tmux list-panes -t $PKG 2>/dev/null)
             splits=$(echo "$panes" | wc -l)
             pane=$((RANDOM % $splits))
-            tmux split-window $h_or_v -t "${PKG}.$pane" $dirpath/uareidiotwithtmux.bash
+            tmux split-window $h_or_v -t "${PKG}.$pane" ./uareidiotwithtmux.bash
             sleep 0.5
         fi
     done
