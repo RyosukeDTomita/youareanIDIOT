@@ -1,4 +1,4 @@
-# bashでブラウザクラッシャーYou are idiotを再現する。
+# bashでブラウザクラッシャーYou are an idiotを再現する。
 ## Environment
 - Ubuntu20.04
 おそらく、他のOSでも動きますが動作未確認です。
