@@ -1,15 +1,14 @@
 #!/bin/bash
 ##########################################################################
-# Name: uareidiotwithtmux.bash
+# Name: uareidiot.bash
 #
-# run automatically by youareidiot.bash
+# You are an idiot! Hahahahahahahahahaha.
 #
-# Usage: ./youareidioto.bash
+# Usage: ./uareidiot.bash
 #
 # Author: Ryosuke Tomita
 # Date: 2021/03/09
 #########################################################################
-#readonly dirpath="/home/tomita/bash/toy/uareidiot"
 
 function changecolor()
 {
@@ -21,7 +20,7 @@ function changecolor()
 function runscript()
 {
     let cnt++
-    ./youareidiot.bash $cnt
+    ./splitwindow.bash $cnt
 }
 
 function installLibrary()
@@ -57,6 +56,8 @@ do
         play -q ./youareidiot.mp3 > /dev/null 2>&1 &
     fi
     sleep 1
+
+    # switch backgroudColor & characterColor
     tmp=$i
     i=$t
     t=$tmp
