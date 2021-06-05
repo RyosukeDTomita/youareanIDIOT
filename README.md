@@ -4,9 +4,9 @@
 おそらく、他のOSでも動きますが動作未確認です。
 
 ## Content
-- uareidotwithtmux.bash
-- youareidiot.bash
-- music/youareidiot.mp3: youareidiotの音声ファイル
+- uareidot.bash
+- splitwindow.bash
+- youareidiot.mp3: youareidiotの音声ファイル
 - record: bashファイル間の情報伝達用のファイル
 
 ## 実行イメージ
@@ -18,16 +18,16 @@
 これらの必要なソフトウェアは、uareitiotwithtmux.bashを実行時に存在しなければ自動でインストールされます。
 うまく実行できない場合は以下のようにインストールしてください。
 
-```
+```shell
 sudo apt install tmux
 sudo apt install sox
 sudo apt install libsox-fmt-mp3
 ```
 ## How to use
 
-```
-sudo ./uareidiotwithtmux.bash # 初回実行時
-./uareidiotwithtmux.bash      #2回目以降
+```shell
+sudo ./uareidiot.bash # 初回実行時
+./uareidiot.bash      #2回目以降
 ```
 - trapコマンドでCtrl - Cを押すたびに☺が増える。そのため、プロセスからkillする必要がある。
 - tputで白黒に点滅する。
@@ -36,7 +36,7 @@ sudo ./uareidiotwithtmux.bash # 初回実行時
 ## How to stop
 trapでCtrl-cシグナルをトラップしているのでkillするにはプロセスからkillする必要がある。
 
-```
+```shell
 # 止め方
 ./killswitch.bash
 ```
